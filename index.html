@@ -4,231 +4,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Guía de navegación - Infografía</title>
+<title>Guía de navegación</title>
 
 <style>
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #101D35, #173F5F, #172C49);
-    color: #26364A;
-    padding: 35px 15px;
+    background: #2E2E2E;
+    font-family: 'Segoe UI', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
 }
 
-.contenedor {
-    width: 100%;
-    max-width: 850px;
-    background: #F2F6FA;
-    color: #26364A;
-    border-radius: 22px;
+.guia {
+    width: 620px;
+    height: 280px;
+    background: #8CC9C3;
+    border: 3px solid #000000;
+    border-radius: 13px;
+    padding: 12px;
+    color: #000000;
     overflow: hidden;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
 }
 
-.encabezado {
-    text-align: center;
-    padding: 35px 20px;
-    background: linear-gradient(120deg, #173F5F, #087E91, #20B8B0);
-    color: white;
-}
-
-.encabezado .icono {
-    font-size: 42px;
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
+    padding: 0 5px;
 }
 
-.encabezado h1 {
-    font-size: 27px;
-    margin-bottom: 10px;
+.cabecera h1 {
+    font-size: 21px;
+    font-weight: 800;
 }
 
-.encabezado p {
-    font-size: 15px;
-    opacity: 0.95;
+.cabecera span {
+    background: #FFC96A;
+    padding: 5px 10px;
+    border: 2px solid #000;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: bold;
 }
 
-.contenido {
-    padding: 30px;
+.pasos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    flex: 1;
+    min-height: 0;
 }
 
 .paso {
-    display: flex;
-    align-items: flex-start;
-    gap: 17px;
-    padding: 17px;
-    margin-bottom: 13px;
     background: #FFFFFF;
-    border-radius: 13px;
-    border-left: 4px solid #20B8B0;
-    transition: 0.25s;
-}
-
-.paso:hover {
-    transform: translateX(5px);
-    background: #E8F6F7;
+    border: 2px solid #000;
+    border-radius: 9px;
+    padding: 8px;
+    display: flex;
+    gap: 7px;
+    align-items: flex-start;
 }
 
 .numero {
-    min-width: 38px;
-    height: 38px;
-    background: #173F5F;
-    color: white;
+    background: #FFC96A;
+    border: 1.5px solid #000;
     border-radius: 50%;
+    min-width: 23px;
+    height: 23px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
     font-weight: bold;
 }
 
 .paso h2 {
-    font-size: 17px;
-    margin-bottom: 5px;
-    color: #087E91;
+    font-size: 12px;
+    margin-bottom: 4px;
+    color: #F14A58;
 }
 
 .paso p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #526477;
+    font-size: 10px;
+    line-height: 1.3;
+    color: #2E2E2E;
 }
 
-.recomendacion {
-    margin-top: 23px;
-    padding: 18px;
-    background: #E9E9F9;
-    border-radius: 12px;
-    border: 1px solid #C8C5ED;
-    color: #454078;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.boton {
-    display: block;
-    width: fit-content;
-    margin: 25px auto 5px;
-    padding: 15px 28px;
-    background: linear-gradient(120deg, #087E91, #20B8B0);
+.final {
+    grid-column: span 2;
+    background: #2E2E2E;
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 15px;
-    border-radius: 30px;
-    transition: 0.3s;
+    border-color: #000;
 }
 
-.boton:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 18px #20B8B055;
+.final h2 {
+    color: #FFC96A;
+}
+
+.final p {
+    color: white;
 }
 
 .pie {
-    text-align: center;
-    padding: 17px;
-    background: #E5ECF2;
-    color: #61758A;
-    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9px;
+    gap: 8px;
 }
 
-@media(max-width: 550px) {
-    .contenido {
-        padding: 20px 15px;
-    }
-
-    .encabezado h1 {
-        font-size: 22px;
-    }
-
-    .paso {
-        gap: 12px;
-    }
+.recomendacion {
+    font-size: 10px;
+    font-weight: bold;
 }
 
+.boton {
+    background: #F14A58;
+    color: #000;
+    text-decoration: none;
+    padding: 8px 13px;
+    border: 2px solid #000;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: 0.2s;
+}
+
+.boton:hover {
+    background: #FFC96A;
+    transform: scale(1.04);
+}
 </style>
 </head>
 
 <body>
 
-<div class="contenedor">
+<div class="guia">
 
-    <header class="encabezado">
-        <div class="icono">🧭</div>
-        <h1>Guía de navegación</h1>
-        <p>Aprende a explorar nuestra infografía interactiva</p>
+    <header class="cabecera">
+        <h1>🧭 Guía de navegación</h1>
+        <span>INFOGRAFÍA INTERACTIVA</span>
     </header>
 
-    <main class="contenido">
+    <main class="pasos">
 
-        <div class="paso">
+        <section class="paso">
             <div class="numero">1</div>
             <div>
                 <h2>Acceso</h2>
-                <p>Entra en el enlace de la infografía y espera a que cargue completamente.</p>
+                <p>Ingresa al enlace y espera a que la infografía cargue completamente.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="paso">
+        <section class="paso">
             <div class="numero">2</div>
             <div>
                 <h2>Navegación</h2>
-                <p>Mueve el ratón por la infografía y accede a todas sus secciones. Utiliza los elementos interactivos y botones disponibles.</p>
+                <p>Mueve el ratón y utiliza los botones para recorrer las secciones.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="paso">
+        <section class="paso">
             <div class="numero">3</div>
             <div>
-                <h2>Contenido interactivo</h2>
-                <p>Haz clic sobre los puntos y elementos resaltados para descubrir información relacionada con las cuatro categorías: animación, videojuegos, podcasts y e-learning.</p>
+                <h2>Interactividad</h2>
+                <p>Haz clic en los puntos resaltados para descubrir las cuatro categorías.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="paso">
+        <section class="paso">
             <div class="numero">4</div>
             <div>
                 <h2>Exploración</h2>
-                <p>Lee las definiciones, observa los elementos gráficos y compara las características de los distintos productos multimedia.</p>
+                <p>Lee las definiciones, observa los gráficos y compara los productos multimedia.</p>
             </div>
-        </div>
+        </section>
 
-        <div class="paso">
+        <section class="paso final">
             <div class="numero">5</div>
             <div>
                 <h2>Finalización</h2>
-                <p>Continúa explorando hasta encontrar la sección de síntesis y agradecimientos.</p>
+                <p>Continúa explorando hasta encontrar la síntesis y los agradecimientos.</p>
             </div>
-        </div>
+        </section>
 
+    </main>
+
+    <footer class="pie">
         <div class="recomendacion">
-            💡 <strong>Recomendación:</strong><br>
-            Explora todos los elementos interactivos para conocer y aprovechar completamente el contenido de la infografía.
+            💡 Explora todos los elementos interactivos.
         </div>
 
         <a class="boton"
            href="https://view.genially.com/6ace7f093d741f1f46d2c3d5"
            target="_blank"
            rel="noopener noreferrer">
-           🚀 Entrar a la infografía
+           🚀 ENTRAR A LA INFOGRAFÍA
         </a>
-
-    </main>
-
-    <footer class="pie">
-        Guía de uso · Infografía interactiva multimedia
     </footer>
 
 </div>
 
 </body>
 </html>
+
