@@ -20,41 +20,41 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 10px;
+    padding: 15px;
 }
 
 .guia {
-    width: 620px;
-    height: 340px;
+    width: 760px;
+    height: 440px;
     background: #8CC9C3;
     border: 3px solid #000000;
-    border-radius: 13px;
-    padding: 15px;
+    border-radius: 16px;
+    padding: 20px;
     color: #000000;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .cabecera {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 13px;
+    margin-bottom: 18px;
     padding: 0 5px;
 }
 
 .cabecera h1 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 800;
 }
 
 .cabecera span {
     background: #FFC96A;
-    padding: 6px 10px;
+    padding: 8px 13px;
     border: 2px solid #000;
-    border-radius: 7px;
-    font-size: 11px;
+    border-radius: 8px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -62,7 +62,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 13px;
     flex: 1;
     min-height: 0;
 }
@@ -70,35 +70,40 @@ body {
 .paso {
     background: #FFFFFF;
     border: 2px solid #000;
-    border-radius: 9px;
-    padding: 10px;
+    border-radius: 12px;
+    padding: 15px;
     display: flex;
-    gap: 8px;
+    gap: 11px;
     align-items: flex-start;
+    transition: 0.2s;
+}
+
+.paso:hover {
+    transform: translateY(-3px);
 }
 
 .numero {
     background: #FFC96A;
-    border: 1.5px solid #000;
+    border: 2px solid #000;
     border-radius: 50%;
-    min-width: 25px;
-    height: 25px;
+    min-width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
 }
 
 .paso h2 {
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 16px;
+    margin-bottom: 8px;
     color: #F14A58;
 }
 
 .paso p {
-    font-size: 11px;
-    line-height: 1.4;
+    font-size: 13px;
+    line-height: 1.5;
     color: #2E2E2E;
 }
 
@@ -106,7 +111,6 @@ body {
     grid-column: span 2;
     background: #2E2E2E;
     color: white;
-    border-color: #000;
 }
 
 .final h2 {
@@ -121,12 +125,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 12px;
-    gap: 8px;
+    margin-top: 17px;
+    gap: 10px;
 }
 
 .recomendacion {
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
 }
 
@@ -134,10 +138,10 @@ body {
     background: #F14A58;
     color: #000;
     text-decoration: none;
-    padding: 9px 14px;
+    padding: 12px 18px;
     border: 2px solid #000;
-    border-radius: 7px;
-    font-size: 11px;
+    border-radius: 9px;
+    font-size: 13px;
     font-weight: 800;
     white-space: nowrap;
     transition: 0.2s;
@@ -148,7 +152,7 @@ body {
     transform: scale(1.04);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 780px) {
     body {
         align-items: flex-start;
     }
@@ -156,7 +160,7 @@ body {
     .guia {
         width: 100%;
         height: auto;
-        min-height: 340px;
+        min-height: 440px;
     }
 
     .pasos {
@@ -170,6 +174,22 @@ body {
 
     .pie {
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .cabecera {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .pasos {
+        grid-template-columns: 1fr;
+    }
+
+    .final {
+        grid-column: span 1;
     }
 }
 </style>
@@ -190,7 +210,7 @@ body {
             <div class="numero">1</div>
             <div>
                 <h2>Acceso</h2>
-                <p>Ingresa al enlace y espera a que la infografía cargue completamente.</p>
+                <p>Ingresa al enlace de la infografía y espera a que cargue completamente.</p>
             </div>
         </section>
 
@@ -198,7 +218,7 @@ body {
             <div class="numero">2</div>
             <div>
                 <h2>Navegación</h2>
-                <p>Mueve el ratón y utiliza los botones para recorrer todas las secciones.</p>
+                <p>Mueve el ratón por la infografía y utiliza los botones para recorrer todas las secciones.</p>
             </div>
         </section>
 
@@ -206,7 +226,7 @@ body {
             <div class="numero">3</div>
             <div>
                 <h2>Interactividad</h2>
-                <p>Haz clic en los puntos resaltados para descubrir las cuatro categorías.</p>
+                <p>Haz clic en los puntos y elementos resaltados para descubrir las cuatro categorías: animación, videojuegos, podcasts y e-learning.</p>
             </div>
         </section>
 
@@ -214,7 +234,7 @@ body {
             <div class="numero">4</div>
             <div>
                 <h2>Exploración</h2>
-                <p>Lee las definiciones, observa los gráficos y compara los productos multimedia.</p>
+                <p>Lee las definiciones, observa los elementos gráficos y compara las características de los distintos productos multimedia.</p>
             </div>
         </section>
 
