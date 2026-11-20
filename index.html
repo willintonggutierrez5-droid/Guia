@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de navegación - Infografía</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #10152d, #202c50, #263d63);
+    color: white;
+    padding: 35px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 850px;
+    background: #ffffff;
+    color: #26334b;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+}
+
+.encabezado {
+    text-align: center;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #5267df, #7656c9);
+    color: white;
+}
+
+.encabezado .icono {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.encabezado h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.encabezado p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.contenido {
+    padding: 30px;
+}
+
+.paso {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 17px;
+    margin-bottom: 13px;
+    background: #f4f6fc;
+    border-radius: 13px;
+    border-left: 4px solid #6575df;
+    transition: 0.2s;
+}
+
+.paso:hover {
+    transform: translateX(5px);
+    background: #edf0ff;
+}
+
+.numero {
+    min-width: 38px;
+    height: 38px;
+    background: #6575df;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.paso h2 {
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #3445a0;
+}
+
+.paso p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #526078;
+}
+
+.recomendacion {
+    margin-top: 23px;
+    padding: 18px;
+    background: #fff7e8;
+    border-radius: 12px;
+    border: 1px solid #f2dfb7;
+    color: #75551c;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.boton {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 5px;
+    padding: 15px 28px;
+    background: linear-gradient(135deg, #5267df, #7656c9);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px #5267df55;
+}
+
+.pie {
+    text-align: center;
+    padding: 17px;
+    background: #f1f3f9;
+    color: #8290a6;
+    font-size: 12px;
+}
+
+@media(max-width: 550px) {
+    .contenido {
+        padding: 20px 15px;
+    }
+
+    .encabezado h1 {
+        font-size: 22px;
+    }
+
+    .paso {
+        gap: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <header class="encabezado">
+        <div class="icono">🧭</div>
+        <h1>Guía de navegación</h1>
+        <p>Aprende a explorar nuestra infografía interactiva</p>
+    </header>
+
+    <main class="contenido">
+
+        <div class="paso">
+            <div class="numero">1</div>
+            <div>
+                <h2>Acceso</h2>
+                <p>Entra en el enlace de la infografía y espera a que cargue completamente.</p>
+            </div>
+        </div>
+
+        <div class="paso">
+            <div class="numero">2</div>
+            <div>
+                <h2>Navegación</h2>
+                <p>Mueve el ratón por la infografía y accede a todas sus secciones. Utiliza los elementos interactivos y botones disponibles.</p>
+            </div>
+        </div>
+
+        <div class="paso">
+            <div class="numero">3</div>
+            <div>
+                <h2>Contenido interactivo</h2>
+                <p>Haz clic sobre los puntos y elementos resaltados para descubrir información relacionada con las cuatro categorías: animación, videojuegos, podcasts y e-learning.</p>
+            </div>
+        </div>
+
+        <div class="paso">
+            <div class="numero">4</div>
+            <div>
+                <h2>Exploración</h2>
+                <p>Lee las definiciones, observa los elementos gráficos y compara las características de los distintos productos multimedia.</p>
+            </div>
+        </div>
+
+        <div class="paso">
+            <div class="numero">5</div>
+            <div>
+                <h2>Finalización</h2>
+                <p>Continúa explorando hasta encontrar la sección de síntesis y agradecimientos.</p>
+            </div>
+        </div>
+
+        <div class="recomendacion">
+            💡 <strong>Recomendación:</strong><br>
+            Explora todos los elementos interactivos para conocer y aprovechar completamente el contenido de la infografía.
+        </div>
+
+        <a class="boton"
+           href="https://view.genially.com/6ace7f093d741f1f46d2c3d5"
+           target="_blank"
+           rel="noopener noreferrer">
+           🚀 Entrar a la infografía
+        </a>
+
+    </main>
+
+    <footer class="pie">
+        Guía de uso · Infografía interactiva multimedia
+    </footer>
+
+</div>
+
+</body>
+</html>
